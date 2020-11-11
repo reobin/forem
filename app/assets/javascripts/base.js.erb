@@ -117,6 +117,9 @@ var instantClick
     if (document.getElementById("navigation-butt")) {
       document.getElementById("navigation-butt").classList.remove('showing')
     }
+    if (body.unmount) {
+      body.unmount();
+    }
     document.getElementsByTagName("BODY")[0].replaceChild(body, pageContentDiv)
 
     var prog = document.getElementById("navigation-progress");
